@@ -1,15 +1,20 @@
 {
   "name": "frontend-react-vendas",
+  "type": "module",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint:fix": "eslint ./src --fix",
+    "lint:format": "prettier  --write \"src/**/*.{js,jsx,ts,tsx,css,md,json}\"",
+    "lint": "npm run lint:fix && npm run lint:format",
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^6.2.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "styled-components": "^6.3.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
